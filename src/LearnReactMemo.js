@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-const CountResult = React.memo(({ text, countState }) => {
+// const CountResult = React.memo(({ text, countState }) => {
+//   console.log(`${text}ボタンがクリックされました！`);
+//   return (
+//     <p>
+//       {text}: {countState}
+//     </p>
+//   );
+// });
+
+// Not use memo
+const CountResult = ({ text, countState }) => {
   console.log(`${text}ボタンがクリックされました！`);
   return (
     <p>
       {text}: {countState}
     </p>
   );
-});
+};
 
 const Counter = () => {
   const [countStateA, setCountStateA] = useState(0);
